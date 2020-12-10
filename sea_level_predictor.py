@@ -26,7 +26,10 @@ def draw_plot():
     plt.plot(ext_years, intercept + slope * ext_years, 'b')
 
     # Add labels and title
-
+    plt.xlabel('Year')
+    plt.ylabel('Sea Level (inches)')
+    plt.title('Rise in Sea Level')
+    
     # Save plot and return data for testing (DO NOT MODIFY)
     plt.savefig('sea_level_plot.png')
     return plt.gca()
