@@ -18,7 +18,7 @@ def draw_plot():
     plt.plot(ext_years, intercept + slope * ext_years, 'r')
 
     # Create second line of best fit
-    mask = df['Year'] > 2000
+    mask = (df['Year'] >= 2000)
     slope, intercept = linregress(
         x=df.loc[mask, 'Year'],
         y=df.loc[mask, 'CSIRO Adjusted Sea Level'])[0:2]
