@@ -9,7 +9,7 @@ def draw_plot():
     df = pd.read_csv('epa-sea-level.csv')
 
     # Create scatter plot
-    plt.scatter(x=df['Year'], y=df['CSIRO Adjusted Sea Level'])
+    plt.scatter(x=df['Year'], y=df['CSIRO Adjusted Sea Level'], s=10, c='black')
 
     # Create first line of best fit
     slope, intercept = linregress(
